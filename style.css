@@ -1,0 +1,271 @@
+:root {
+  --primary: #2b7a78;
+  --primary-dark: #17252a;
+  --accent: #f28482;
+  --bg-light: #f8fafa;
+  --text-main: #2d3748;
+  --text-muted: #5a6778;
+  --white: #ffffff;
+  --radius: 12px;
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text-main);
+  background-color: var(--bg-light);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Navigation */
+header {
+  background: var(--white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary-dark);
+  text-decoration: none;
+}
+
+.logo span {
+  color: var(--primary);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+.btn {
+  display: inline-block;
+  background: var(--primary);
+  color: var(--white) !important;
+  padding: 0.65rem 1.3rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: var(--primary-dark);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #def2f1 0%, #ffffff 100%);
+  padding: 4.5rem 1.5rem;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  color: var(--primary-dark);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+/* Shared Section Styling */
+section {
+  padding: 4rem 1.5rem;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.section-title h2 {
+  font-size: 2rem;
+  color: var(--primary-dark);
+  margin-bottom: 0.5rem;
+}
+
+.section-title p {
+  color: var(--text-muted);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 1.75rem;
+}
+
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  box-shadow: var(--shadow);
+}
+
+.card h3 {
+  color: var(--primary-dark);
+  margin-bottom: 0.5rem;
+}
+
+.card-subtitle {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Services */
+.service-icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.price-tag {
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 0.95rem;
+}
+
+/* Team (Vets & Trainers) */
+.team-badge {
+  display: inline-block;
+  background: #def2f1;
+  color: var(--primary-dark);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: 20px;
+  margin-bottom: 0.75rem;
+}
+
+.team-meta {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 0.75rem;
+  border-top: 1px solid #edf2f7;
+  padding-top: 0.75rem;
+}
+
+/* Pet Care Tips */
+.tip-card {
+  border-left: 4px solid var(--primary);
+}
+
+/* Appointment & Contact Grid */
+.split-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--primary-dark);
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-top: 0.3rem;
+  font-family: inherit;
+}
+
+.contact-item {
+  margin-bottom: 1.25rem;
+}
+
+.contact-item strong {
+  display: block;
+  color: var(--primary-dark);
+}
+
+.emergency-box {
+  background: #fff5f5;
+  border: 1px solid #feb2b2;
+  color: #9b2c2c;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+}
+
+/* Footer */
+footer {
+  background: var(--primary-dark);
+  color: #cbd5e0;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 650px) {
+  nav ul {
+    gap: 0.9rem;
+    margin-top: 0.75rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
